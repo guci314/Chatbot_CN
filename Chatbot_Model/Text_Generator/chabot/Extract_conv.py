@@ -18,6 +18,7 @@ import jieba
 import numpy as np
 
 from tqdm import tqdm
+sys.path.append('..')
 from word_sequence import WordSequence
 
 # sys.path.append('..')
@@ -55,12 +56,12 @@ def main(limit=20, x_limit=3, y_limit=6):
         limit: 只输出句子长度小于limit的句子
     """
     print('load pretrained vec')
-    word_vec_path = 'D:\project\Chatbot_CN\Chatbot_Data\Text_generator\word_vec.pkl'
+    word_vec_path = './word_vec.pkl'
     word_vec = pickle.load(open(word_vec_path, 'rb'))
 
     print('extract lines')
     # data_path = 'D:\project\Chatbot_CN\Chatbot_Data\Text_generator\dgk_shooter_min.conv'
-    data_path = 'D:\project\Chatbot_CN\Chatbot_Data\Text_generator\\xiaohuangji.conv'
+    data_path = '/content/xiaohuangji50w_fenciA.conv'
     # fp = open('dgk_shooter_min.conv', 'r', errors='ignore')
     fp = open(data_path, 'r', encoding='utf-8', errors='ignore')
     last_line = None

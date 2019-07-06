@@ -42,7 +42,7 @@ def read_vector():
     :param output_path:
     :return:
     '''
-    vec_path = 'D:\project\Chatbot_CN\Chatbot_Data\Text_generator\wiki.zh.vec'
+    vec_path = '/content/wiki.zh.vec'
     output_path = './word_vec.pkl'
     fp = open(vec_path, 'r', encoding='utf-8')
     word_vec = {}

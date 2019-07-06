@@ -42,8 +42,8 @@ def test(bidirectional, cell_type, depth, attention_type, use_residual, use_drop
     :return:
     '''
 
-    emb_path = 'D:\project\Chatbot_CN\Chatbot_Data\Text_generator\emb.pkl'
-    chatbot_path = 'D:\project\Chatbot_CN\Chatbot_Data\Text_generator\chatbot.pkl'
+    emb_path = './emb.pkl'
+    chatbot_path = './chatbot.pkl'
 
     emb = pickle.load(open(emb_path, 'rb'))
 
@@ -70,7 +70,7 @@ def test(bidirectional, cell_type, depth, attention_type, use_residual, use_drop
         log_device_placement=False
     )
 
-    save_path = './chatbots/S2S_Chatbot.ckpt'
+    save_path = './s2ss_chatbot.ckpt'
 
     tf.reset_default_graph()
     with tf.Graph().as_default():
